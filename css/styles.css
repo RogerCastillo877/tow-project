@@ -324,6 +324,55 @@ header p:first-child {
   }
 }
 
+/* Main */
+.first-section {
+  background: linear-gradient(to bottom, transparent 50%, transparent 50%, transparent), url('https://img.freepik.com/free-photo/fixing-custom-motorcycle-standing-repair-shop-instruments-equipment-hobbies-unique-jobs_158595-8095.jpg?w=1060&t=st=1687990939~exp=1687991539~hmac=a587d1b3191abf34a67639ce2536d484a31086acf619aab4547546ed73860e42');
+  background-position: center, top center;
+  background-repeat: no-repeat;
+  background-size: 100%, 55rem;
+}
+
+@media (min-width: 768px) {
+  .first-section {
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url('https://img.freepik.com/foto-gratis/hermoso-paisaje-parque-nacional-grand-teton-wyoming-estados-unidos_181624-60981.jpg?w=1060&t=st=1688142095~exp=1688142695~hmac=a33d0526227f613a6c3b8dd8222a8056868e378fa7710848c900f06bc53a9e4e');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 150%, 120%;
+    /* padding: 10rem 0; */
+  }
+}
+
+.first-section-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .first-section-grid {
+    column-gap: 8rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset;
+  }
+}
+
+.text-grid {
+  color: var(--black);
+  grid-row: 2 / 3;
+  padding: 3rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .text-grid {
+    grid-column: 2 / 3;
+    padding: 0;
+  }
+}
+
+.text {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
 .main {
   background-image: url("https://img.freepik.com/free-photo/fixing-custom-motorcycle-standing-repair-shop-instruments-equipment-hobbies-unique-jobs_158595-8095.jpg?w=1060&t=st=1687990939~exp=1687991539~hmac=a587d1b3191abf34a67639ce2536d484a31086acf619aab4547546ed73860e42");
   background-repeat: no-repeat;
