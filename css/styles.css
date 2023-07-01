@@ -147,6 +147,14 @@ header p:first-child {
   margin: 0 auto 2rem auto;
 }
 
+.button__action--secondary {
+  max-width: 30rem;
+  border: .3rem solid var(--orange);
+  border-radius: 0.3rem;
+  padding: 1.5rem;
+  margin: 0 auto 2rem auto;
+}
+
 .icon {
   color: var(--green);
   margin-right: 0.8rem;
@@ -154,7 +162,8 @@ header p:first-child {
   font-size: 2.5rem;
 }
 
-.button__action a {
+.button__action a,
+.button__action--secondary a {
   color: var(--black);
   font-family: var(--primary-font);
   font-weight: 700;
