@@ -94,6 +94,7 @@ ul {
 
 /* heading */
 header {
+  padding-top: 2rem;
   background-color: var(--orange);
   width: 100%;
   color: var(--white);
@@ -128,6 +129,10 @@ header p:first-child {
 }
 
 @media(min-width: 1200px) {
+  header {
+    padding-top: 0;
+  }
+
   .first-block {
     display: block;
     max-width: 50%;
@@ -146,6 +151,7 @@ header p:first-child {
   color: var(--green);
   margin-right: 0.8rem;
   font-weight: 700;
+  font-size: 2.5rem;
 }
 
 .button__action a {
