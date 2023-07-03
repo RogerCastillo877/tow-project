@@ -49,7 +49,7 @@ h1,
 h2,
 h3 {
   font-weight: 900;
-  font-family: 'Roboto';
+  font-family: var(--primary-font);
   margin: 2.5rem 0;
 }
 
@@ -181,7 +181,7 @@ header p:first-child {
   padding: 2.5rem;
   display: flex;
   justify-content: space-around;
-  margin: 0 -2rem;
+  margin: 0;
 }
 
 .header__logo {
@@ -365,6 +365,12 @@ header p:first-child {
   }
 }
 
+@media (min-width: 1200px) {
+  .first-section-grid {
+    column-gap: 16rem;
+  }
+}
+
 .text-grid {
   color: var(--black);
   grid-row: 2 / 3;
@@ -410,21 +416,16 @@ header p:first-child {
     background-image: linear-gradient(to right, transparent 50%, var(--white) 50%, var(--white) 100%), url('../img/man-talking-phone-car.jpg');
     background-position: center, left center;
     background-repeat: no-repeat;
-    background-size: 100%, 70%;
-    padding: 3rem 0;
+    background-size: 100%, 72%;
+    padding: 0;
   }
 }
 
-/* 
 @media (min-width: 1200px) {
   .second-section {
-    background-image: linear-gradient(to left, transparent 50%, var(--white) 50%, var(--white) 100%), url('../img/man-talking-phone-car.jpg');
-    background-position: center, center right;
-    background-repeat: no-repeat;
-    background-size: 100%, 70%;
-    padding: 10rem 0;
+    padding: 3rem 0;
   }
-} */
+}
 
 .second-section-grid {
   display: grid;
@@ -432,7 +433,6 @@ header p:first-child {
 }
 
 @media (min-width: 768px) {
-
   .second-section-grid {
     column-gap: 8rem;
     grid-template-columns: repeat(2, 1fr);
@@ -440,8 +440,14 @@ header p:first-child {
   }
 }
 
+@media (min-width: 1200px) {
+  .second-section-grid {
+    column-gap: 16rem;
+  }
+}
+
 .second-text-grid {
-  padding-top: 4.5rem;
+  padding: 4.5rem 2.5rem 2.5rem 2.5rem;
   grid-row: 2 / 3;
 }
 
@@ -453,81 +459,103 @@ header p:first-child {
   }
 }
 
-.main {
-  background-image: url("https://img.freepik.com/free-photo/fixing-custom-motorcycle-standing-repair-shop-instruments-equipment-hobbies-unique-jobs_158595-8095.jpg?w=1060&t=st=1687990939~exp=1687991539~hmac=a587d1b3191abf34a67639ce2536d484a31086acf619aab4547546ed73860e42");
+.third-section-grid {
+  background-image: linear-gradient(to right, rgba(24, 74, 141, 0.5) 0%, rgba(24, 74, 141, 0.5) 100%), url('../img/500_F_496702879_n3x40fAaGA5Z1Tt7hdmkFRSu8CclLJ9A.jpg');
+  background-position: center, top center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 300px;
+  background-size: 100%, 150%;
 }
 
-.main__text {
-  padding: 1.5rem;
-  font-weight: 400;
-  font-size: 1.5rem;
+@media (min-width: 768px) {
+  .third-section-grid {
+    background-image: linear-gradient(to right, rgba(24, 74, 141, 0.5) 50%, rgba(24, 74, 141, 1) 50%, rgba(24, 74, 141, 1) 100%), url('../img/500_F_496702879_n3x40fAaGA5Z1Tt7hdmkFRSu8CclLJ9A.jpg');
+    background-position: center, 160% 75%;
+    background-size: 100%, 130%;
+  }
+}
+
+.third-section-grid ul li::before {
+  content: "\2022";
+  color: var(--orange);
+  font-weight: bold;
+  display: inline-block;
+  width: 2rem;
+}
+
+.third-text-grid {
+  color: var(--white);
+  font-size: 2rem;
+  line-height: 2.5rem;
+  padding: 3rem 0 0 0;
+}
+
+@media (min-width: 768px) {
+  .third-section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+  }
+
+  .third-text-grid {
+    grid-column: 2 / 3;
+  }
+}
+
+.third-text-grid h2 {
+  text-align: center;
+  color: var(--orange);
+}
+
+.third-text-footer {
+  background-color: var(--orange);
+  padding: 2rem;
+  color: var(--white);
   display: flex;
   flex-direction: column;
-  font-family: var(--secondary-font);
+  align-items: center;
+  margin-top: 2.5rem;
 }
 
-.main__price {
+@media (min-width: 768px) {
+  .third-text-footer {
+    margin-left: -4rem;
+  }
+}
+
+.third-text-footer span {
+  color: var(--white);
+  font-size: 2.5rem;
+}
+
+.third-text-footer a:last-child {
+  margin-top: 1rem;
+}
+
+.third-text-footer p {
+  margin-top: 0;
+}
+
+/* Agreements */
+.agreements h2 {
+  line-height: 3.5rem;
+  padding: 1rem 3rem;
   text-align: center;
-  font-weight: 700;
-  margin-bottom: 2rem;
 }
 
-.main__offer {
-  padding: 1.5rem;
-  background-color: rgba(24, 74, 141, 0.5);
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
-
-.main-offer__image {
-  background-image: url("../img/500_F_496702879_n3x40fAaGA5Z1Tt7hdmkFRSu8CclLJ9A.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  border-radius: 0.5rem;
-}
-
-.main__offer h2 {
+.agreements p {
+  padding: 0 3rem;
   text-align: center;
   margin: 0;
+}
+
+.agreement-card h3 {
+  margin: 2rem 0;
   font-family: var(--primary-font);
-  font-size: 3rem;
-  color: var(--orange);
-  margin-bottom: 1rem;
-}
-
-.main__offer span,
-.main__offer ul {
-  color: var(--white);
-}
-
-.footer-image {
-  background-color: var(--orange);
-  padding: 1.5rem;
-}
-
-.footer-image span {
-  color: var(--white);
-}
-
-footer {
-  height: 61px;
-  background-color: var(--black);
-  color: var(--white);
-  display: block;
-  text-align: center;
+  font-family: 2rem;
   font-weight: 700;
-  padding-top: 30px;
-}
-
-.agreements {
-  padding: 1.5rem;
-  font-family: var(--secondary-font);
-  font-size: 1.5rem;
+  text-align: center;
+  color: var(--orange);
+  text-transform: uppercase;
 }
 
 .agreement-card {
@@ -542,17 +570,39 @@ footer {
   padding: 1rem;
   display: flex;
   margin: 0rem auto;
+  min-height: 8rem;
 }
 
-.agreement-card__icon img {
-  width: 8rem;
+.w-6 {
+  width: 6rem;
 }
 
-.agreement-card__title {
-  font-family: var(--primary-font);
-  font-family: 2rem;
-  font-weight: 700;
+.w-5 {
+  width: 5rem;
+}
+
+@media (min-width: 768px) {
+
+  .agreement-card h3 {
+    line-height: 3rem;
+  }
+
+  .agreements__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonials */
+
+
+/* Footer */
+footer {
+  height: 61px;
+  background-color: var(--black);
+  color: var(--white);
+  display: block;
   text-align: center;
-  padding: 1rem;
-  color: var(--orange);
+  font-weight: 700;
+  padding-top: 30px;
 }
