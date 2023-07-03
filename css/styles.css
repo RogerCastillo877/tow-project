@@ -691,9 +691,9 @@ footer a>span {
 }
 
 .footer-grid {
-  background-image: linear-gradient(to right, transparent 50%, var(--black) 50%, var(--black) 100%), url('../img/logo1.svg');
-  background-position: center, left center;
-  background-size: 100%, 50%;
+  background-image: linear-gradient(to right, transparent 50%, var(--black) 50%, var(--black) 100%), url('../img/Logo.jpeg');
+  background-position: center, 15% center;
+  background-size: 100%, 40%;
   background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -702,15 +702,15 @@ footer a>span {
 
 @media (min-width: 768px) {
   .footer-grid {
-    background-size: 100%, 40%;
-    background-position: center, 15% 0%;
+    background-size: 100%, 15%;
+    background-position: center, 30% 0%;
     gap: 16rem;
   }
 }
 
 @media (min-width: 1200px) {
   .footer-grid {
-    background-size: 100%, 30%;
+    background-size: 100%, 10%;
     background-position: center, 25% 0%;
   }
 }
